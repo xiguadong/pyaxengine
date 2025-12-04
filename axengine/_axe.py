@@ -397,7 +397,6 @@ class AXEngineSession(Session):
         outputs = []
         origin_output_names = [_o.name for _o in self.get_outputs(shape_group)]
         outputs_ranks = [output_names.index(_on) for _on in origin_output_names]
-
         if 0 == ret:
             for i in outputs_ranks:
                 sys_lib.AX_SYS_MinvalidateCache(
